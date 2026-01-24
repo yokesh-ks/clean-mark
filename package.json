@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --port 3020",
     "build": "next build",
+    "commit": "git-cz",
     "start": "next start",
     "lint": "biome lint",
     "lint:fix": "biome lint --apply",
@@ -38,8 +39,15 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "tailwindcss": "^4",
     "typescript": "^5.7.4",
     "wrangler": "^4.60.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
