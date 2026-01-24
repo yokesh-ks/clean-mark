@@ -13,6 +13,7 @@ interface PageProps {
 async function convertUrl(url: string): Promise<{ markdown: string | null; error: string | null }> {
 
   console.log('Converting URL:', url, ",,,");
+  console.log('Using API endpoint:', API_ENDPOINT);
   try {
     const response = await fetch(API_ENDPOINT, {
       method: 'POST',
