@@ -20,7 +20,7 @@ async function convertUrl(url: string): Promise<{ markdown: string | null; error
       headers: {
         'Content-Type': 'application/json',
         'Accept': '*/*',
-        'User-Agent': 'PostmanRuntime/7.51.0',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36',
         'Cache-Control': 'no-cache',
         'Accept-Encoding': 'gzip, deflate, br',
         'Connection': 'keep-alive',
