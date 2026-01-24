@@ -19,24 +19,12 @@ export const Header = () => {
           </span>
         </a>
 
-        {/* Navigation */}
-        <nav className="hidden md:flex items-center gap-1">
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-            Features
-          </Button>
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-            API
-          </Button>
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-            Docs
-          </Button>
-        </nav>
 
         {/* Actions */}
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" className="hidden sm:flex" asChild>
             <a
-              href="https://github.com"
+              href="https://github.com/yokesh-ks/clean-mark"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"

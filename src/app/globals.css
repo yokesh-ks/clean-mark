@@ -529,3 +529,9 @@ code, pre, .font-mono {
 .shadow-accent-glow {
     box-shadow: var(--shadow-accent-glow);
 }
+
+.heart {
+    color: rgb(226, 85, 85);
+    display: inline-block;
+    animation: 1.5s ease-in-out 0s infinite normal none running heartbeat;
+}

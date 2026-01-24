@@ -130,11 +130,7 @@ export const Footer = () => {
         <Separator className="my-8" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>&copy; {currentYear} CleanMark. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Made with <Heart className="h-3.5 w-3.5 text-destructive fill-destructive" /> for the
-            developer community
-          </p>
+          <p>&copy; 2026 <a href="https://www.ingeniousclan.com/?utm_source=cleanmark.ingeniousclan.com&utm_medium=website&ref=cleanmark.ingeniousclan.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">IngeniousClan</a>. All rights reserved. • Made with <span className="heart">♥</span> by <a href="https://www.yokesh.in/?utm_source=cleanmark.ingeniousclan.com&utm_medium=website&ref=cleanmark.ingeniousclan.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Yokesh</a></p>
         </div>
       </div>
     </footer>
