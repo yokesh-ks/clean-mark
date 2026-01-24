@@ -86,7 +86,6 @@ Key configuration files:
 
 - `next.config.ts` - Next.js configuration
 - `open-next.config.ts` - OpenNext specific configuration
-- `wrangler.jsonc` - Cloudflare Workers configuration
 
 ## Available Scripts
 
