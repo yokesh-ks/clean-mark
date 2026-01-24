@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ArrowRight, Globe, Loader2, Sparkles } from "lucide-react";
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { ArrowRight, Globe, Loader2, Sparkles } from 'lucide-react';
 
 interface HeroProps {
   onConvert: (url: string) => void;
@@ -11,7 +11,7 @@ interface HeroProps {
 }
 
 export const Hero = ({ onConvert, isLoading }: HeroProps) => {
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,13 +22,13 @@ export const Hero = ({ onConvert, isLoading }: HeroProps) => {
 
   const exampleUrls = [
     {
-      label: "StackOverflow",
-      url: "https://stackoverflow.com/questions/79873503/pgadmin-wont-answer-correctly",
+      label: 'StackOverflow',
+      url: 'https://stackoverflow.com/questions/79873503/pgadmin-wont-answer-correctly',
     },
-    { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Markdown" },
+    { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Markdown' },
     {
-      label: "MDN",
-      url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      label: 'MDN',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     },
   ];
 
@@ -46,13 +46,13 @@ export const Hero = ({ onConvert, isLoading }: HeroProps) => {
 
       {/* Code snippets decoration */}
       <div className="absolute top-24 left-8 hidden lg:block opacity-20 font-mono text-xs text-muted-foreground">
-        {"[ .JSON ]"}
+        {'[ .JSON ]'}
       </div>
       <div className="absolute top-32 right-12 hidden lg:block opacity-20 font-mono text-xs text-muted-foreground">
-        {"[ .MD ]"}
+        {'[ .MD ]'}
       </div>
       <div className="absolute bottom-40 left-16 hidden lg:block opacity-20 font-mono text-xs text-muted-foreground">
-        {"< HTML />"}
+        {'< HTML />'}
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-6">
@@ -67,28 +67,24 @@ export const Hero = ({ onConvert, isLoading }: HeroProps) => {
 
           {/* Headline */}
           <h1 className="animate-slide-up text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-balance">
-            Turn any website into{" "}
-            <span className="text-gradient-primary">clean Markdown</span>
+            Turn any website into <span className="text-gradient-primary">clean Markdown</span>
           </h1>
 
           {/* Subheadline */}
           <p
             className="animate-slide-up text-lg md:text-xl text-muted-foreground max-w-2xl mb-10"
-            style={{ animationDelay: "0.1s" }}
+            style={{ animationDelay: '0.1s' }}
           >
-            Extract noise-free, structured content from any URL. Perfect for AI
-            training, documentation, and content analysis.
+            Extract noise-free, structured content from any URL. Perfect for AI training,
+            documentation, and content analysis.
           </p>
 
           {/* Search/Convert Form */}
           <Card
             className="animate-slide-up w-full max-w-2xl p-2 shadow-lg border-border/50 bg-card/80 backdrop-blur-sm"
-            style={{ animationDelay: "0.2s" }}
+            style={{ animationDelay: '0.2s' }}
           >
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-2"
-            >
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
               <div className="relative flex-1">
                 <Globe className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                 <input
@@ -126,7 +122,7 @@ export const Hero = ({ onConvert, isLoading }: HeroProps) => {
           {/* Example URLs */}
           <div
             className="animate-fade-in mt-6 flex flex-wrap items-center justify-center gap-2 text-sm"
-            style={{ animationDelay: "0.3s" }}
+            style={{ animationDelay: '0.3s' }}
           >
             <span className="text-muted-foreground">Try:</span>
             {exampleUrls.map((example, index) => (

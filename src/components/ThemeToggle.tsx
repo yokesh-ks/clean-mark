@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "@/context/ThemeContext";
+import { Button } from '@/components/ui/button';
+import { Moon, Sun } from 'lucide-react';
+import { useTheme } from '@/context/ThemeContext';
 
 export const ThemeToggle = () => {
   const { theme, toggleTheme, mounted } = useTheme();
@@ -27,16 +27,16 @@ export const ThemeToggle = () => {
       size="icon"
       onClick={toggleTheme}
       className="relative overflow-hidden"
-      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
       <Sun
         className={`h-5 w-5 transition-all duration-300 ${
-          theme === "dark" ? "rotate-90 scale-0" : "rotate-0 scale-100"
+          theme === 'dark' ? 'rotate-90 scale-0' : 'rotate-0 scale-100'
         }`}
       />
       <Moon
         className={`absolute h-5 w-5 transition-all duration-300 ${
-          theme === "dark" ? "rotate-0 scale-100" : "-rotate-90 scale-0"
+          theme === 'dark' ? 'rotate-0 scale-100' : '-rotate-90 scale-0'
         }`}
       />
     </Button>

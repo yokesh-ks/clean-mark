@@ -1,21 +1,20 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { MarkdownResult } from "@/components/MarkdownResult";
-import { Features } from "@/components/Features";
-import { HowItWorks } from "@/components/HowItWorks";
-import { Footer } from "@/components/Footer";
-import { Toaster } from "@/components/ui/sonner";
-import { toast } from "sonner";
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Hero } from '@/components/Hero';
+import { MarkdownResult } from '@/components/MarkdownResult';
+import { Features } from '@/components/Features';
+import { HowItWorks } from '@/components/HowItWorks';
+import { Footer } from '@/components/Footer';
+import { Toaster } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
-const API_ENDPOINT =
-  "https://url-to-markdown-convertor.ksyokesh98.workers.dev/";
+const API_ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT!;
 
 export default function Home() {
   const [markdownResult, setMarkdownResult] = useState<string | null>(null);
-  const [sourceUrl, setSourceUrl] = useState("");
+  const [sourceUrl, setSourceUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleConvert = async (url: string) => {
@@ -25,9 +24,9 @@ export default function Home() {
 
     try {
       const response = await fetch(API_ENDPOINT, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           url: url,
@@ -43,17 +42,15 @@ export default function Home() {
 
       const data = await response.text();
       setMarkdownResult(data);
-      toast.success("URL converted successfully!");
+      toast.success('URL converted successfully!');
 
       // Scroll to result
       setTimeout(() => {
-        document
-          .getElementById("result")
-          ?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById('result')?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     } catch (error) {
-      console.error("Conversion error:", error);
-      toast.error("Failed to convert URL. Please check the URL and try again.");
+      console.error('Conversion error:', error);
+      toast.error('Failed to convert URL. Please check the URL and try again.');
     } finally {
       setIsLoading(false);
     }

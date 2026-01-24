@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
+import { useState } from 'react';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Badge } from '@/components/ui/badge';
 import {
   Copy,
   Check,
@@ -15,9 +15,9 @@ import {
   ExternalLink,
   Clock,
   Hash,
-} from "lucide-react";
-import { toast } from "sonner";
-import ReactMarkdown from "react-markdown";
+} from 'lucide-react';
+import { toast } from 'sonner';
+import ReactMarkdown from 'react-markdown';
 
 interface MarkdownResultProps {
   result: string;
@@ -26,36 +26,36 @@ interface MarkdownResultProps {
 
 export const MarkdownResult = ({ result, sourceUrl }: MarkdownResultProps) => {
   const [copied, setCopied] = useState(false);
-  const [activeTab, setActiveTab] = useState("preview");
+  const [activeTab, setActiveTab] = useState('preview');
 
   if (!result) return null;
 
   const wordCount = result.split(/\s+/).filter(Boolean).length;
   const charCount = result.length;
-  const lineCount = result.split("\n").length;
+  const lineCount = result.split('\n').length;
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(result);
       setCopied(true);
-      toast.success("Markdown copied to clipboard!");
+      toast.success('Markdown copied to clipboard!');
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      toast.error("Failed to copy to clipboard");
+      toast.error('Failed to copy to clipboard');
     }
   };
 
   const handleDownload = () => {
-    const blob = new Blob([result], { type: "text/markdown" });
+    const blob = new Blob([result], { type: 'text/markdown' });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
+    const a = document.createElement('a');
     a.href = url;
-    a.download = "content.md";
+    a.download = 'content.md';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    toast.success("Markdown file downloaded!");
+    toast.success('Markdown file downloaded!');
   };
 
   return (
@@ -70,9 +70,7 @@ export const MarkdownResult = ({ result, sourceUrl }: MarkdownResultProps) => {
                   <FileText className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h2 className="font-semibold text-foreground">
-                    Converted Markdown
-                  </h2>
+                  <h2 className="font-semibold text-foreground">Converted Markdown</h2>
                   <a
                     href={sourceUrl}
                     target="_blank"
@@ -100,25 +98,15 @@ export const MarkdownResult = ({ result, sourceUrl }: MarkdownResultProps) => {
           </CardHeader>
 
           <CardContent className="p-0">
-            <Tabs
-              value={activeTab}
-              onValueChange={setActiveTab}
-              className="w-full"
-            >
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
               {/* Tab Controls */}
               <div className="flex items-center justify-between border-b border-border px-4 py-2 bg-muted/20">
                 <TabsList className="h-9 bg-muted/50">
-                  <TabsTrigger
-                    value="preview"
-                    className="gap-1.5 text-xs sm:text-sm"
-                  >
+                  <TabsTrigger value="preview" className="gap-1.5 text-xs sm:text-sm">
                     <Eye className="h-3.5 w-3.5" />
                     Preview
                   </TabsTrigger>
-                  <TabsTrigger
-                    value="raw"
-                    className="gap-1.5 text-xs sm:text-sm"
-                  >
+                  <TabsTrigger value="raw" className="gap-1.5 text-xs sm:text-sm">
                     <Code2 className="h-3.5 w-3.5" />
                     Raw
                   </TabsTrigger>
@@ -126,12 +114,7 @@ export const MarkdownResult = ({ result, sourceUrl }: MarkdownResultProps) => {
 
                 {/* Actions */}
                 <div className="flex items-center gap-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleCopy}
-                    className="gap-1.5"
-                  >
+                  <Button variant="outline" size="sm" onClick={handleCopy} className="gap-1.5">
                     {copied ? (
                       <>
                         <Check className="h-4 w-4 text-success" />
@@ -144,12 +127,7 @@ export const MarkdownResult = ({ result, sourceUrl }: MarkdownResultProps) => {
                       </>
                     )}
                   </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleDownload}
-                    className="gap-1.5"
-                  >
+                  <Button variant="outline" size="sm" onClick={handleDownload} className="gap-1.5">
                     <Download className="h-4 w-4" />
                     <span className="hidden sm:inline">Download</span>
                   </Button>

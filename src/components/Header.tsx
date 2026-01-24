@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { FileText, Github, Zap } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ThemeToggle } from '@/components/ThemeToggle';
+import { FileText, Github, Zap } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export const Header = () => {
   return (
@@ -21,25 +21,13 @@ export const Header = () => {
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center gap-1">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-muted-foreground hover:text-foreground"
-          >
+          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
             Features
           </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-muted-foreground hover:text-foreground"
-          >
+          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
             API
           </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-muted-foreground hover:text-foreground"
-          >
+          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
             Docs
           </Button>
         </nav>

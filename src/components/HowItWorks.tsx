@@ -1,27 +1,26 @@
-"use client";
+'use client';
 
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Link, Cpu, FileText } from "lucide-react";
+import { Card, CardContent } from '@/components/ui/card';
+import { ArrowRight, Link, Cpu, FileText } from 'lucide-react';
 
 const steps = [
   {
-    number: "01",
+    number: '01',
     icon: Link,
-    title: "Paste URL",
-    description: "Enter any webpage URL you want to convert to Markdown format.",
+    title: 'Paste URL',
+    description: 'Enter any webpage URL you want to convert to Markdown format.',
   },
   {
-    number: "02",
+    number: '02',
     icon: Cpu,
-    title: "Process",
-    description:
-      "Our engine fetches and intelligently extracts the main content.",
+    title: 'Process',
+    description: 'Our engine fetches and intelligently extracts the main content.',
   },
   {
-    number: "03",
+    number: '03',
     icon: FileText,
-    title: "Get Markdown",
-    description: "Receive clean, structured Markdown ready for your use case.",
+    title: 'Get Markdown',
+    description: 'Receive clean, structured Markdown ready for your use case.',
   },
 ];
 
@@ -31,12 +30,9 @@ export const HowItWorks = () => {
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            How It Works
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">How It Works</h2>
           <p className="text-lg text-muted-foreground">
-            Three simple steps to transform any webpage into clean, usable
-            Markdown.
+            Three simple steps to transform any webpage into clean, usable Markdown.
           </p>
         </div>
 
@@ -60,9 +56,7 @@ export const HowItWorks = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-semibold mb-2 text-foreground">
-                      {step.title}
-                    </h3>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">{step.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       {step.description}
                     </p>

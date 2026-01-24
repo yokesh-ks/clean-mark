@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
+import type { Metadata } from 'next';
+import './globals.css';
+import { ThemeProvider } from '@/context/ThemeContext';
 
 export const metadata: Metadata = {
-  title: "CleanMark - URL to Markdown Converter",
+  title: 'CleanMark - URL to Markdown Converter',
   description:
-    "Transform any webpage into clean, LLM-ready Markdown. Built for developers, researchers, and AI enthusiasts.",
+    'Transform any webpage into clean, LLM-ready Markdown. Built for developers, researchers, and AI enthusiasts.',
 };
 
 export default function RootLayout({

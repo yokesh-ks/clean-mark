@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { FileText, Github, Twitter, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { FileText, Github, Twitter, Heart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,8 +22,8 @@ export const Footer = () => {
               </span>
             </a>
             <p className="text-muted-foreground text-sm max-w-sm mb-4">
-              Transform any webpage into clean, LLM-ready Markdown. Built for
-              developers, researchers, and AI enthusiasts.
+              Transform any webpage into clean, LLM-ready Markdown. Built for developers,
+              researchers, and AI enthusiasts.
             </p>
             <div className="flex items-center gap-2">
               <Button variant="ghost" size="icon-sm" asChild>
@@ -132,9 +132,8 @@ export const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>&copy; {currentYear} CleanMark. All rights reserved.</p>
           <p className="flex items-center gap-1">
-            Made with{" "}
-            <Heart className="h-3.5 w-3.5 text-destructive fill-destructive" />{" "}
-            for the developer community
+            Made with <Heart className="h-3.5 w-3.5 text-destructive fill-destructive" /> for the
+            developer community
           </p>
         </div>
       </div>
